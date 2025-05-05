@@ -1,54 +1,26 @@
-# React + TypeScript + Vite
+# Temu v0
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+It doesn't matter which coding platform you use to prototype your front-end.
+They all use the exact same trick:
 
-Currently, two official plugins are available:
+1. They use Claude Sonnet 3.5 (or derivatives) because Claude is a very good boy.
+2. They install the shadcn/ui library and ask the model not to use anything else.
+3. They provide some basic rules that reign in the model's propensity to do more than asked for.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+If you look at the system prompts from Anthropic Artifacts, v0, Lovable, Bolt,
+etc. they all work the exact same way. You want to know what's even crazier? You
+don't even need Cursor or a fancy IDE. Building the equivalent of Claude Code is
+[a few hundred lines of code](https://ampcode.com/how-to-build-an-agent).
 
-## Expanding the ESLint configuration
+## Template
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This template provides a minimal setup to prototype user interfaces. It happens
+to use Cursor rules so you should probably just use Cursor.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Vibe-coding locally
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+1. [Install Bun](https://bun.sh/) (if you have NodeJS installed that works too).
+2. Clone this repository or instantiate it as a template.
+3. `bun install` in the repository.
+4. `bun run dev` and open http://localhost:5173/ in your browser.
+5. Ask Cursor to make a change. For example: "Change the label of the button on the homepage to please click me and when the user clicks open an alert that says Hello my dear user.
