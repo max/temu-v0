@@ -14,8 +14,6 @@ etc. they all work the exact same way. You want to know what's even crazier? You
 don't even need Cursor or a fancy IDE. Building the equivalent of Claude Code is
 [a few hundred lines of code](https://ampcode.com/how-to-build-an-agent).
 
-## Template
-
 This template provides a minimal setup to prototype user interfaces. It happens
 to use Cursor rules so you should probably just use Cursor.
 
