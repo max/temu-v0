@@ -23,4 +23,4 @@ to use Cursor rules so you should probably just use Cursor.
 2. Clone this repository or instantiate it as a template.
 3. `bun install` in the repository.
 4. `bun run dev` and open http://localhost:5173/ in your browser.
-5. Ask Cursor to make a change. For example: "Change the label of the button on the homepage to please click me and when the user clicks open an alert that says Hello my dear user.
+5. Ask Cursor to make a change. For example: "Change the label of the button on the homepage to please click me and when the user clicks open an alert that says Hello my dear user."
