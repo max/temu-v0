@@ -1,5 +1,7 @@
 # Temu v0
 
+![Temu v0](./assets/icon.png)
+
 It doesn't matter which coding platform you use to prototype your front-end.
 They all use the exact same trick:
 
